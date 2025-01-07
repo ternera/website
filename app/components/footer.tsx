@@ -17,7 +17,7 @@ import EmailModal from "./EmailModal";
 
 const YEAR = new Date().getFullYear();
 
-function SocialLink({ href, icon: Icon, onClick }) {
+function SocialLink({ href, icon: Icon, onClick }: { href: string; icon: any; onClick?: (e: React.MouseEvent<HTMLAnchorElement>) => void }) {
   return (
     <a href={href} target="_blank" rel="noopener noreferrer" onClick={onClick}>
       <Icon />
