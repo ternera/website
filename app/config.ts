@@ -14,5 +14,6 @@ export const socialLinks = {
   bluesky: "https://bsky.app/profile/ternera.bsky.social",
   discord: "https://discord.gg/ternera",
   spotify: "https://open.spotify.com/user/31uyi4f227ggbuf6shvi5e7wkjai",
+  matrix: "https://matrix.to/#/@ternera:matrix.org",
   email: "mailto:example@gmail.com",
 };

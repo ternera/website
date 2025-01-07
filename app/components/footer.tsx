@@ -1,29 +1,31 @@
 "use client";
 
-import React from "react";
+import React, { useState } from "react";
 import {
   FaGithub,
   FaReddit,
   FaMedium,
-  FaBluesky,  
+  FaBluesky,
   FaRss,
   FaDiscord,
   FaSpotify,
+  FaMessage,
 } from "react-icons/fa6";
 import { TbMailFilled } from "react-icons/tb";
 import { metaData, socialLinks } from "app/config";
+import EmailModal from "./EmailModal";
 
 const YEAR = new Date().getFullYear();
 
-function SocialLink({ href, icon: Icon }) {
+function SocialLink({ href, icon: Icon, onClick }) {
   return (
-    <a href={href} target="_blank" rel="noopener noreferrer">
+    <a href={href} target="_blank" rel="noopener noreferrer" onClick={onClick}>
       <Icon />
     </a>
   );
 }
 
-function SocialLinks() {
+function SocialLinks({ onEmailClick }) {
   return (
     <div className="flex text-lg gap-3.5 float-right transition-opacity duration-300 hover:opacity-90">
       <SocialLink href={socialLinks.github} icon={FaGithub} />
@@ -32,7 +34,8 @@ function SocialLinks() {
       <SocialLink href={socialLinks.bluesky} icon={FaBluesky} />
       <SocialLink href={socialLinks.discord} icon={FaDiscord} />
       <SocialLink href={socialLinks.spotify} icon={FaSpotify} />
-      <SocialLink href={socialLinks.email} icon={TbMailFilled} />
+      <SocialLink href={socialLinks.matrix} icon={FaMessage} />
+      <SocialLink href="#" icon={TbMailFilled} onClick={onEmailClick} />
       <a href="/rss.xml" target="_self">
         <FaRss />
       </a>
@@ -41,26 +44,40 @@ function SocialLinks() {
 }
 
 export default function Footer() {
+  const [isModalOpen, setModalOpen] = useState(false);
+
+  const handleEmailClick = (e) => {
+    e.preventDefault();
+    setModalOpen(true);
+  };
+
+  const handleCloseModal = () => {
+    setModalOpen(false);
+  };
+
   return (
-    <small className="block lg:mt-24 mt-16 text-[#1C1C1C] dark:text-[#D4D4D4]">
-      <time>© {YEAR}</time>{" "}
-      <a
-        className="no-underline"
-        href={socialLinks.bluesky}
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        {metaData.title}
-      </a>
-      <style jsx>{`
-        @media screen and (max-width: 480px) {
-          article {
-            padding-top: 2rem;
-            padding-bottom: 4rem;
+    <div>
+      <small className="block lg:mt-24 mt-16 text-[#1C1C1C] dark:text-[#D4D4D4]">
+        <time>© {YEAR}</time>{" "}
+        <a
+          className="no-underline"
+          href={socialLinks.bluesky}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          {metaData.title}
+        </a>
+        <style jsx>{`
+          @media screen and (max-width: 480px) {
+            article {
+              padding-top: 2rem;
+              padding-bottom: 4rem;
+            }
           }
-        }
-      `}</style>
-      <SocialLinks />
-    </small>
+        `}</style>
+        <SocialLinks onEmailClick={handleEmailClick} />
+      </small>
+      <EmailModal isOpen={isModalOpen} onClose={handleCloseModal} />
+    </div>
   );
 }
