@@ -8,6 +8,7 @@ import { SpeedInsights } from "@vercel/speed-insights/next";
 import Footer from "./components/footer";
 import { ThemeProvider } from "./components/theme-switch";
 import { metaData } from "./config";
+import React from "react";
 
 export const metadata: Metadata = {
   metadataBase: new URL(metaData.baseUrl),
@@ -89,6 +90,7 @@ export default function RootLayout({
             <SpeedInsights />
           </main>
         </ThemeProvider>
+        <script src="https://www.google.com/recaptcha/api.js" async defer></script>
       </body>
     </html>
   );

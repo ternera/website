@@ -1,4 +1,11 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
+import ReCAPTCHA from "./ReCAPTCHA";
+
+declare global {
+  interface Window {
+    grecaptcha: any;
+  }
+}
 
 export default function EmailModal({ isOpen, onClose }) {
   const [formData, setFormData] = useState({
@@ -8,29 +15,18 @@ export default function EmailModal({ isOpen, onClose }) {
     "g-recaptcha-response": "",
   });
 
-  useEffect(() => {
-    if (isOpen) {
-      const script = document.createElement("script");
-      script.src = "https://www.google.com/recaptcha/api.js";
-      script.async = true;
-      script.defer = true;
-      document.body.appendChild(script);
-
-      return () => {
-        document.body.removeChild(script);
-      };
-    }
-  }, [isOpen]);
-
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData((prevData) => ({ ...prevData, [name]: value }));
   };
 
+  const handleRecaptchaChange = (response: string) => {
+    setFormData((prevData) => ({ ...prevData, "g-recaptcha-response": response }));
+  };
+
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const recaptchaResponse = grecaptcha.getResponse();
-    if (!recaptchaResponse) {
+    if (!formData["g-recaptcha-response"]) {
       alert("Please complete the reCAPTCHA.");
       return;
     }
@@ -40,7 +36,7 @@ export default function EmailModal({ isOpen, onClose }) {
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify({ ...formData, "g-recaptcha-response": recaptchaResponse }),
+      body: JSON.stringify(formData),
     });
 
     if (response.ok) {
@@ -96,7 +92,7 @@ export default function EmailModal({ isOpen, onClose }) {
               required
             />
           </div>
-          <div className="g-recaptcha" data-sitekey="6LeZQHwpAAAAAINsgjqmEnKjKioklcW1TNuViSsz"></div>
+          <ReCAPTCHA sitekey="6LeZQHwpAAAAAINsgjqmEnKjKioklcW1TNuViSsz" onChange={handleRecaptchaChange} />
           <div className="flex justify-end mt-4">
             <button
               type="button"
