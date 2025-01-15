@@ -34,7 +34,7 @@ export default function Page() {
         Since a young age, I have been interested in computers and how they work. This has helped me become familiar with Windows, Linux, and MacOS ecosystems as well as basic helpdesk/troubleshooting techniques.
         </p>
         <p>
-        In some of my free time, I help out as a global administrator on Wikipedia. This involves miscellaneous maintenance on the site and occasional spam cleanup. At the time of writing, I also lead a few Reddit communities with a total of 20 million members and a Discord server with 10 thousand members!
+        In some of my free time, I volunteer as a global system operator for Wikipedia. This involves miscellaneous maintenance of various Wikipedia projects and occasional spam cleanup. At the time of writing, I also lead a few Reddit communities with a total of 20 million members and a Discord server with 10 thousand members!
         I've been able to automate some ruitine moderation tasks by using writing filters and bots. It's also taught me a lot about customer service and conflict resolution! I'm open to doing freelance community management work!
         </p>
         <p> 
