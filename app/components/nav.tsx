@@ -3,7 +3,7 @@ import { ThemeSwitch } from "./theme-switch";
 import { metaData } from "../config";
 
 const navItems = {
-  "https://medium.com/@ternera": { name: "Blog", external: true },
+  "/blog": { name: "Blog", external: true },
   // "/projects": { name: "Projects" },
   // "/photos": { name: "Photos" },
 };
