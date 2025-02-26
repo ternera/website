@@ -1,13 +1,12 @@
 import React, { useState } from "react";
 import ReCAPTCHA from "./ReCAPTCHA";
 
-declare global {
-  interface Window {
-    grecaptcha: any;
-  }
+interface EmailModalProps {
+  isOpen: boolean;
+  onClose: () => void;
 }
 
-export default function EmailModal({ isOpen, onClose }) {
+const EmailModal: React.FC<EmailModalProps> = ({ isOpen, onClose }) => {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -109,4 +108,6 @@ export default function EmailModal({ isOpen, onClose }) {
       </div>
     </div>
   );
-}
+};
+
+export default EmailModal;
