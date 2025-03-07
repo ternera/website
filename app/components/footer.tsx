@@ -3,13 +3,13 @@
 import React, { useState } from "react";
 import {
   FaGithub,
-  FaReddit,
+  FaReddit, 
   FaMedium,
   FaBluesky,
   FaRss,
   FaDiscord,
   FaSpotify,
-  FaMessage,
+  FaYoutube
 } from "react-icons/fa6";
 import { TbMailFilled } from "react-icons/tb";
 import { metaData, socialLinks } from "app/config";
@@ -30,11 +30,11 @@ function SocialLinks({ onEmailClick }) {
     <div className="flex text-lg gap-3.5 float-right transition-opacity duration-300 hover:opacity-90">
       <SocialLink href={socialLinks.github} icon={FaGithub} />
       <SocialLink href={socialLinks.reddit} icon={FaReddit} />
+      <SocialLink href={socialLinks.youtube} icon={FaYoutube} />
       <SocialLink href={socialLinks.medium} icon={FaMedium} />
       <SocialLink href={socialLinks.bluesky} icon={FaBluesky} />
       <SocialLink href={socialLinks.discord} icon={FaDiscord} />
       <SocialLink href={socialLinks.spotify} icon={FaSpotify} />
-      <SocialLink href={socialLinks.matrix} icon={FaMessage} />
       <SocialLink href="#" icon={TbMailFilled} onClick={onEmailClick} />
       <a href="/rss.xml" target="_self">
         <FaRss />
@@ -61,7 +61,7 @@ export default function Footer() {
         <time>© {YEAR}</time>{" "}
         <a
           className="no-underline"
-          href={socialLinks.bluesky}
+          href={socialLinks.github}
           target="_blank"
           rel="noopener noreferrer"
         >

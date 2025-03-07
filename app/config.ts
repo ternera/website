@@ -10,6 +10,7 @@ export const metaData = {
 export const socialLinks = {
   github: "https://github.com/ternera",
   reddit: "https://reddit.com/u/ternera",
+  youtube: "https://youtube.com/@ternera",
   medium: "https://medium.com/@ternera",
   bluesky: "https://bsky.app/profile/ternera.bsky.social",
   discord: "https://discord.gg/ternera",

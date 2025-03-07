@@ -1,7 +1,7 @@
 import React from "react";
 import Link from "next/link";
-import Image, { ImageProps } from "next/image";
-import { MDXRemote, MDXRemoteProps } from "next-mdx-remote/rsc";
+import Image from "next/image";
+import { MDXRemote } from "next-mdx-remote/rsc";
 import { highlight } from "sugar-high";
 import { TweetComponent } from "./tweet";
 import { CaptionComponent } from "./caption";
@@ -11,48 +11,31 @@ import rehypeKatex from "rehype-katex";
 import remarkMath from "remark-math";
 import "katex/dist/katex.min.css";
 
-interface CustomLinkProps extends React.AnchorHTMLAttributes<HTMLAnchorElement> {
-  href: string;
-}
-
-function CustomLink({ href, ...props }: CustomLinkProps) {
+function CustomLink(props) {
+  let href = props.href;
   if (href.startsWith("/")) {
     return (
-      <Link href={href}>
-        <a {...props} />
+      <Link href={href} {...props}>
+        {props.children}
       </Link>
     );
   }
   if (href.startsWith("#")) {
-    return <a href={href} {...props} />;
+    return <a {...props} />;
   }
-  return <a href={href} target="_blank" rel="noopener noreferrer" {...props} />;
+  return <a target="_blank" rel="noopener noreferrer" {...props} />;
 }
 
-function RoundedImage({ alt, ...props }: ImageProps) {
-  return <Image alt={alt || ""} className="rounded-lg" {...props} />;
+function RoundedImage(props) {
+  return <Image alt={props.alt} className="rounded-lg" {...props} />;
 }
 
-interface CodeProps {
-  children: string;
-  [key: string]: any;
-}
-
-function Code({ children, ...props }: CodeProps) {
+function Code({ children, ...props }) {
   let codeHTML = highlight(children);
   return <code dangerouslySetInnerHTML={{ __html: codeHTML }} {...props} />;
 }
 
-interface TableData {
-  headers: string[];
-  rows: (string | number)[][];
-}
-
-interface TableProps {
-  data: TableData;
-}
-
-function Table({ data }: TableProps) {
+function Table({ data }) {
   let headers = data.headers.map((header, index) => (
     <th key={index}>{header}</th>
   ));
@@ -73,25 +56,20 @@ function Table({ data }: TableProps) {
   );
 }
 
-function Strikethrough(props: React.HTMLAttributes<HTMLElement>) {
+function Strikethrough(props) {
   return <del {...props} />;
 }
 
-interface CalloutProps {
-  emoji: React.ReactNode;
-  children: React.ReactNode;
-}
-
-function Callout({ emoji, children }: CalloutProps) {
+function Callout(props) {
   return (
     <div className="px-4 py-3 bg-[#F7F7F7] dark:bg-[#181818] rounded p-1 text-sm flex items-center text-neutral-900 dark:text-neutral-100 mb-8">
-      <div className="flex items-center w-4 mr-4">{emoji}</div>
-      <div className="w-full callout leading-relaxed">{children}</div>
+      <div className="flex items-center w-4 mr-4">{props.emoji}</div>
+      <div className="w-full callout leading-relaxed">{props.children}</div>
     </div>
   );
 }
 
-function slugify(str: string): string {
+function slugify(str) {
   return str
     .toString()
     .toLowerCase()
@@ -102,12 +80,8 @@ function slugify(str: string): string {
     .replace(/\-\-+/g, "-");
 }
 
-interface HeadingProps {
-  children: string;
-}
-
-function createHeading(level: number) {
-  const Heading = ({ children }: HeadingProps) => {
+function createHeading(level) {
+  const Heading = ({ children }) => {
     let slug = slugify(children);
     return React.createElement(
       `h${level}`,
@@ -126,7 +100,7 @@ function createHeading(level: number) {
   return Heading;
 }
 
-const components = {
+let components = {
   h1: createHeading(1),
   h2: createHeading(2),
   h3: createHeading(3),
@@ -145,15 +119,11 @@ const components = {
   Callout,
 };
 
-interface CustomMDXProps extends Omit<MDXRemoteProps, 'components'> {
-  components?: Record<string, React.ComponentType<any>>;
-}
-
-export function CustomMDX({ components: userComponents, ...props }: CustomMDXProps) {
+export function CustomMDX(props) {
   return (
     <MDXRemote
       {...props}
-      components={{ ...components, ...(userComponents || {}) }}
+      components={{ ...components, ...(props.components || {}) }}
       options={{
         mdxOptions: {
           remarkPlugins: [remarkMath],
