@@ -55,7 +55,7 @@ export default function Exif() {
         <div className="prose prose-neutral dark:prose-invert max-w-none">
           <div className="mb-8 text-lg leading-relaxed">
             <p className="mb-6">
-              Ever wondered about the story behind a photo you see online? The <Link 
+              Ever wondered the story behind a photo you see online? The <Link 
                 href="https://chromewebstore.google.com/detail/exif-metadata-viewer/begcpebobbbopmlfomknjjcfcganemea"
                 target="_blank"
                 rel="noopener noreferrer" 
