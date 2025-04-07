@@ -1,0 +1,44 @@
+---
+title: TryHackMe — CyberHeroes
+publishedAt: 2025-04-07
+---
+
+This challenge starts with the following information:
+> Want to be a part of the elite club of CyberHeroes? Prove your merit by finding a way to log in!
+
+I visited the site in my browser by navigating to the following page:
+
+    http://<ipaddress>
+
+There is a login page, which I visited.
+
+![](https://cdn-images-1.medium.com/max/2000/1*j3R0AK6BchFSM9YKLp7GZQ.png)
+
+Upon viewing the source code, I saw that the username and password were stored in plain text inside an if statement:
+
+     <script>
+        function authenticate() {
+          a = document.getElementById('uname')
+          b = document.getElementById('pass')
+          const RevereString = str => [...str].reverse().join('');
+          if (a.value=="h3ck3rBoi" & b.value==RevereString("54321@terceSrepuS")) { 
+            var xhttp = new XMLHttpRequest();
+            xhttp.onreadystatechange = function() {
+              if (this.readyState == 4 && this.status == 200) {
+                document.getElementById("flag").innerHTML = this.responseText ;
+                document.getElementById("todel").innerHTML = "";
+                document.getElementById("rm").remove() ;
+              }
+            };
+            xhttp.open("GET", "RandomLo0o0o0o0o0o0o0o0o0o0gpath12345_Flag_"+a.value+"_"+b.value+".txt", true);
+            xhttp.send();
+          }
+          else {
+            alert("Incorrect Password, try again.. you got this hacker !")
+          }
+        }
+      </script>
+
+After pasting in the username and reversing the password, I was able to log in and received the flag.
+
+![](https://cdn-images-1.medium.com/max/2000/1*I8TD8STX0dOqFkrJ-Gi-6Q.png)
