@@ -16,5 +16,6 @@ export const socialLinks = {
   discord: "https://discord.gg/ternera",
   spotify: "https://open.spotify.com/user/31uyi4f227ggbuf6shvi5e7wkjai",
   matrix: "https://matrix.to/#/@ternera:matrix.org",
+  linkedin: "https://linkedin.com/in/ternera",
   email: "mailto:example@gmail.com",
 };

@@ -9,7 +9,8 @@ import {
   FaRss,
   FaDiscord,
   FaSpotify,
-  FaYoutube
+  FaYoutube,
+  FaLinkedin
 } from "react-icons/fa6";
 import { TbMailFilled } from "react-icons/tb";
 import { metaData, socialLinks } from "app/config";
@@ -35,6 +36,7 @@ function SocialLinks({ onEmailClick }) {
       <SocialLink href={socialLinks.bluesky} icon={FaBluesky} />
       <SocialLink href={socialLinks.discord} icon={FaDiscord} />
       <SocialLink href={socialLinks.spotify} icon={FaSpotify} />
+      <SocialLink href={socialLinks.linkedin} icon={FaLinkedin} />
       <SocialLink href="#" icon={TbMailFilled} onClick={onEmailClick} />
       <a href="/rss.xml" target="_self">
         <FaRss />
