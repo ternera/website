@@ -13,7 +13,7 @@ export const socialLinks = {
   youtube: "https://youtube.com/@ternera",
   medium: "https://medium.com/@ternera",
   bluesky: "https://bsky.app/profile/ternera.bsky.social",
-  discord: "https://discord.gg/ternera",
+  signal: "https://signal.me/#eu/ternera.01",
   spotify: "https://open.spotify.com/user/31uyi4f227ggbuf6shvi5e7wkjai",
   matrix: "https://matrix.to/#/@ternera:matrix.org",
   linkedin: "https://linkedin.com/in/ternera",

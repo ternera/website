@@ -7,11 +7,11 @@ import {
   FaMedium,
   FaBluesky,
   FaRss,
-  FaDiscord,
   FaSpotify,
   FaYoutube,
   FaLinkedin
 } from "react-icons/fa6";
+import { SiSignal } from "react-icons/si";
 import { TbMailFilled } from "react-icons/tb";
 import { metaData, socialLinks } from "app/config";
 import EmailModal from "./EmailModal";
@@ -34,7 +34,7 @@ function SocialLinks({ onEmailClick }) {
       <SocialLink href={socialLinks.youtube} icon={FaYoutube} />
       <SocialLink href={socialLinks.medium} icon={FaMedium} />
       <SocialLink href={socialLinks.bluesky} icon={FaBluesky} />
-      <SocialLink href={socialLinks.discord} icon={FaDiscord} />
+      <SocialLink href={socialLinks.signal} icon={SiSignal} />
       <SocialLink href={socialLinks.spotify} icon={FaSpotify} />
       <SocialLink href={socialLinks.linkedin} icon={FaLinkedin} />
       <SocialLink href="#" icon={TbMailFilled} onClick={onEmailClick} />
