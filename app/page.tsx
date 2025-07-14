@@ -34,8 +34,8 @@ export default function Page() {
         Since a young age, I have been interested in computers and how they work. This has helped me become familiar with Windows, Linux, and MacOS ecosystems as well as basic helpdesk/troubleshooting techniques.
         </p>
         <p>
-        In some of my free time, I help as a global system operator at Wikipedia. This involves performing maintenance tasks various Wikipedia projects and occasional spam cleanup. At the time of writing, I also lead a few Reddit communities and a Discord server related to artwork!
-        I've been able to automate some ruitine moderation tasks by writing filters and bots. It's also taught me a lot about customer service and conflict resolution! I'm open to doing freelance community management work!
+        In some of my free time, I help as a global sysop (systems operator) for the Wikimedia Foundation. This involves performing maintenance tasks across various Wikipedia projects and occasional spam cleanup. At the time of writing, I also lead a few Reddit communities and a Discord server related to artwork!
+        I've been able to automate some routine moderation tasks by writing filters and bots. It's also taught me a lot about customer service and conflict resolution! I'm open to doing freelance community management work!
         </p>
         <p> 
         Occasionally, I’ll play games like Counter-Strike: Global Offensive or Minecraft. I’m not a competitive or experienced gamer by any means, but it’s fun to sit back and enjoy a gaming session with friends sometimes!
