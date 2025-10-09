@@ -2,7 +2,7 @@ import Link from "next/link";
 import { ThemeSwitch } from "./theme-switch";
 import { metaData } from "../config";
 
-const navItems = {
+const navItems: Record<string, { name: string; external?: boolean }> = {
   "/blog": { name: "Blog" },
 //"/blog": { name: "Blog", external: true },
  // "/projects": { name: "Projects" },
@@ -20,7 +20,7 @@ export function Navbar() {
           </Link>
         </div>
         <div className="flex flex-row gap-4 mt-6 md:mt-0 md:ml-auto items-center">
-          {Object.entries(navItems).map(([path, { name, external? }]) => (
+          {Object.entries(navItems).map(([path, { name, external }]) => (
             external ? (
               <a
                 key={path}
