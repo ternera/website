@@ -4,7 +4,7 @@ import { metaData } from "../config";
 
 const navItems = {
   "/blog": { name: "Blog" },
-  //"/blog": { name: "Blog", external: true },
+//"/blog": { name: "Blog", external: true },
  // "/projects": { name: "Projects" },
  // "/photos": { name: "Photos" },
  // "/exif": { name: "EXIF" },
@@ -20,7 +20,7 @@ export function Navbar() {
           </Link>
         </div>
         <div className="flex flex-row gap-4 mt-6 md:mt-0 md:ml-auto items-center">
-          {Object.entries(navItems).map(([path, { name, external }]) => (
+          {Object.entries(navItems).map(([path, { name, external? }]) => (
             external ? (
               <a
                 key={path}
