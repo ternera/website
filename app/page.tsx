@@ -22,20 +22,19 @@ export default function Page() {
 
       <div className="prose prose-neutral dark:prose-invert">
         <p>
-        I'm just a dude who is interested in IT, coding, community management, and technology in general. Feel free to reach out to me if you want to chat!
+        I'm just a dude who is interested in IT, coding, drawing, painting, running online communities, and technology in general. Feel free to reach out to me if you want to chat!
         </p>
         <p>
         <li>I am always working to become more like Jesus in thought and deed.</li>
         <li>I manage some communities on Reddit and Discord.</li>
-        <li>I enjoy beautiful things, like the outdoors and viewing artwork.</li>
-        <li>I enjoy learning new skills and getting better at existing ones. Currently, I'm interested in learning moer about Linux, programming, troubleshooting, and problem solving.</li>
+        <li>I enjoy painting, drawing, and spending time in nature.</li>
         </p>
         <p>
-        Since a young age, I have been interested in computers and how they work. This has helped me become familiar with Windows, Linux, and MacOS ecosystems as well as basic helpdesk/troubleshooting techniques.
+        Since a young age, I have been interested in computers and how they work. This has helped me become familiar with Windows, Linux, and MacOS ecosystems as well as basic helpdesk/troubleshooting techniques. Currently, I am daily driving MacOS to become more familiar with it.
         </p>
         <p>
         In some of my free time, I help as a global sysop (systems operator) for the Wikimedia Foundation. This involves performing maintenance tasks across various Wikipedia projects and occasional spam cleanup. At the time of writing, I also lead a few Reddit communities and a Discord server related to artwork!
-        I've been able to automate some routine moderation tasks by writing filters and bots. It's also taught me a lot about customer service and conflict resolution! I'm open to doing freelance community management work!
+        I've been able to automate some routine moderation tasks by writing filters and bots. It's also taught me a lot about customer service and conflict resolution!
         </p>
         <p> 
         Occasionally, I’ll play games like Counter-Strike: Global Offensive or Minecraft. I’m not a competitive or experienced gamer by any means, but it’s fun to sit back and enjoy a gaming session with friends sometimes!
