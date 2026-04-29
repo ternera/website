@@ -3,13 +3,13 @@
 import React, { useState } from "react";
 import {
   FaGithub,
-  FaReddit, 
+  FaReddit,
   FaMedium,
   FaBluesky,
   FaRss,
   FaSpotify,
   FaYoutube,
-  FaLinkedin
+  FaLinkedin,
 } from "react-icons/fa6";
 import { SiSignal } from "react-icons/si";
 import { TbMailFilled } from "react-icons/tb";
@@ -18,7 +18,15 @@ import EmailModal from "./EmailModal";
 
 const YEAR = new Date().getFullYear();
 
-function SocialLink({ href, icon: Icon, onClick }: { href: string; icon: any; onClick?: (e: React.MouseEvent<HTMLAnchorElement>) => void }) {
+function SocialLink({
+  href,
+  icon: Icon,
+  onClick,
+}: {
+  href: string;
+  icon: any;
+  onClick?: (e: React.MouseEvent<HTMLAnchorElement>) => void;
+}) {
   return (
     <a href={href} target="_blank" rel="noopener noreferrer" onClick={onClick}>
       <Icon />
@@ -28,7 +36,7 @@ function SocialLink({ href, icon: Icon, onClick }: { href: string; icon: any; on
 
 function SocialLinks({ onEmailClick }) {
   return (
-    <div className="flex text-lg gap-3.5 float-right transition-opacity duration-300 hover:opacity-90">
+    <div className="flex text-lg gap-3.5 float-right transition-opacity duration-300 hover:opacity-90 mt-2 sm:mt-0">
       <SocialLink href={socialLinks.github} icon={FaGithub} />
       <SocialLink href={socialLinks.reddit} icon={FaReddit} />
       <SocialLink href={socialLinks.youtube} icon={FaYoutube} />
