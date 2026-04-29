@@ -13,7 +13,7 @@ pnpm create next-app --example https://github.com/ternera/website my-portfolio
 Start the development server:
 
 ```
-pnpm dev
+pnpm  dev
 ```
 
 The server will be running at [http://localhost:3000](http://localhost:3000).
