@@ -40,6 +40,7 @@ function SocialLinks({ onEmailClick }) {
       <SocialLink href={socialLinks.github} icon={FaGithub} />
       <SocialLink href={socialLinks.reddit} icon={FaReddit} />
       <SocialLink href={socialLinks.youtube} icon={FaYoutube} />
+      <SocialLink href={socialLinks.twitch} icon={FaTwitch} />
       <SocialLink href={socialLinks.medium} icon={FaMedium} />
       <SocialLink href={socialLinks.bluesky} icon={FaBluesky} />
       <SocialLink href={socialLinks.signal} icon={SiSignal} />
