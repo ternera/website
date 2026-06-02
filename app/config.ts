@@ -11,6 +11,7 @@ export const socialLinks = {
   github: "https://github.com/ternera",
   reddit: "https://reddit.com/u/ternera",
   youtube: "https://youtube.com/@ternera",
+  twitch: "https://twitch.tv/ternera",
   medium: "https://medium.com/@ternera",
   bluesky: "https://bsky.app/profile/ternera.org",
   signal: "https://signal.me/#eu/xwTrQIubDCOHK0hpPJSp-P-y9t5xGLdXRLacO6srVrC1xSrYZURPL6ZDU-w5b9lE",
