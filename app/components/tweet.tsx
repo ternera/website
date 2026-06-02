@@ -12,12 +12,9 @@ const TweetContent = async ({ id, components, onError }: TweetProps) => {
   let error;
   const tweet = id
     ? await getTweet(id).catch((err) => {
-        if (onError) {
-          error = onError(err);
-        } else {
-          console.error(err);
-          error = err;
-        }
+        error = onError ? onError(err) : err;
+        console.error('Failed to fetch tweet:', id, err);
+        return undefined;
       })
     : undefined;
 
@@ -29,15 +26,13 @@ const TweetContent = async ({ id, components, onError }: TweetProps) => {
   return <EmbeddedTweet tweet={tweet} components={components} />;
 };
 
-export const ReactTweet = (props: TweetProps) => <TweetContent {...props} />;
-
 export async function TweetComponent({ id }: { id: string }) {
   return (
     <div className="tweet my-6">
-      <div className={`flex justify-center`}>
-        {/* <Suspense fallback={<TweetSkeleton />}> */}
-        <ReactTweet id={id} />
-        {/* </Suspense> */}
+      <div className="flex justify-center">
+        <Suspense fallback={<TweetSkeleton />}>
+          <ReactTweet id={id} />
+        </Suspense>
       </div>
     </div>
   );
