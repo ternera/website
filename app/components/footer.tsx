@@ -11,7 +11,7 @@ import {
   FaYoutube,
   FaLinkedin,
 } from "react-icons/fa6";
-import { SiSignal } from "react-icons/si";
+import { SiSignal, SiTwitch } from "react-icons/si";
 import { TbMailFilled } from "react-icons/tb";
 import { metaData, socialLinks } from "app/config";
 import EmailModal from "./EmailModal";
@@ -40,7 +40,7 @@ function SocialLinks({ onEmailClick }) {
       <SocialLink href={socialLinks.github} icon={FaGithub} />
       <SocialLink href={socialLinks.reddit} icon={FaReddit} />
       <SocialLink href={socialLinks.youtube} icon={FaYoutube} />
-      <SocialLink href={socialLinks.twitch} icon={FaTwitch} />
+      <SocialLink href={socialLinks.twitch} icon={SiTwitch} />
       <SocialLink href={socialLinks.medium} icon={FaMedium} />
       <SocialLink href={socialLinks.bluesky} icon={FaBluesky} />
       <SocialLink href={socialLinks.signal} icon={SiSignal} />
