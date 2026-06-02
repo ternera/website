@@ -70,7 +70,13 @@ function Callout(props) {
 }
 
 function slugify(str) {
-  return str
+  const text = typeof str === "string"
+    ? str
+    : Array.isArray(str)
+    ? str.map(s => (typeof s === "string" ? s : s?.props?.children ?? "")).join("")
+    : str?.props?.children ?? "";
+
+  return text
     .toString()
     .toLowerCase()
     .trim()
