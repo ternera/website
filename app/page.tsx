@@ -46,8 +46,8 @@ export default function Page() {
           In some of my free time, I help as a global sysop (systems operator)
           for the Wikimedia Foundation. This involves performing maintenance
           tasks across various Wikipedia projects and occasional spam cleanup.
-          Previously, I also curated a few Reddit communities and a Discord
-          server related to artwork as well! I was able to automate some routine
+          Previously, I curated a few Reddit communities and a Discord server
+          related to artwork as well! I was able to automate some routine
           moderation tasks by writing filters and bots. It also taught me a lot
           about customer service and conflict resolution!
         </p>
