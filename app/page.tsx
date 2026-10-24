@@ -17,30 +17,55 @@ export default function Page() {
       </a>
 
       <h1 className="mb-8 text-2xl font-medium tracking-tight">
-      Hey, I’m ternera - nice to meet you!
+        Hey, I’m ternera - nice to meet you!
       </h1>
 
       <div className="prose prose-neutral dark:prose-invert">
         <p>
-        I'm just a dude who is interested in IT, coding, drawing, painting, running online communities, and technology in general. Feel free to reach out to me if you want to chat!
+          I'm just a dude who is interested in IT, coding, drawing, painting,
+          running online communities, and technology in general. Feel free to
+          reach out to me if you want to chat!
         </p>
         <p>
-        <li>I am always working to become more like Jesus in thought and deed.</li>
-        <li>I manage some communities on Reddit and Discord.</li>
-        <li>I enjoy painting, drawing, and spending time in nature.</li>
+          <li>
+            I am always working to become more like Jesus in thought and deed.
+          </li>
+          <li>I manage some communities on the internet.</li>
+          <li>I enjoy painting, drawing, and spending time in nature.</li>
         </p>
         <p>
-        Since a young age, I have been interested in computers and how they work. This has helped me become familiar with Windows, Linux, and MacOS ecosystems as well as basic helpdesk/troubleshooting techniques. Currently, I am daily driving MacOS to become more familiar with it.
+          Since a young age, I have been interested in computers and how they
+          work. This has helped me become familiar with Windows, Linux, and
+          MacOS ecosystems as well as basic helpdesk/troubleshooting techniques.
+          Currently, I am daily driving MacOS to become more familiar with it.
+          In 2026, I started a homelab where I've configured an organized
+          network, experimented with a variety of services on Proxmox, and do my
+          best to have good uptime.
         </p>
         <p>
-        In some of my free time, I help as a global sysop (systems operator) for the Wikimedia Foundation. This involves performing maintenance tasks across various Wikipedia projects and occasional spam cleanup. At the time of writing, I also lead a few Reddit communities and a Discord server related to artwork!
-        I've been able to automate some routine moderation tasks by writing filters and bots. It's also taught me a lot about customer service and conflict resolution!
-        </p>
-        <p> 
-        Occasionally, I’ll play games like Counter-Strike: Global Offensive or Minecraft. I’m not a competitive or experienced gamer by any means, but it’s fun to sit back and enjoy a gaming session with friends sometimes!
+          In some of my free time, I help as a global sysop (systems operator)
+          for the Wikimedia Foundation. This involves performing maintenance
+          tasks across various Wikipedia projects and occasional spam cleanup.
+          Previously, I also curated a few Reddit communities and a Discord
+          server related to artwork as well! I was able to automate some routine
+          moderation tasks by writing filters and bots. It also taught me a lot
+          about customer service and conflict resolution!
         </p>
         <p>
-        I’m a firm believer in <a href="https://en.wiktionary.org/wiki/touch_grass">touching grass</a> and highly recommend it. Get outside and do things! 😀 Oh, and if you haven't received Jesus Christ's <a href="https://www.biblegateway.com/">free gift of salvation</a>, you should look into that!
+          Occasionally, I’ll play games like Counter-Strike: Global Offensive or
+          Minecraft. I’m not a competitive or experienced gamer by any means,
+          but it’s fun to sit back and enjoy a gaming session with friends
+          sometimes!
+        </p>
+        <p>
+          I’m a firm believer in{" "}
+          <a href="https://en.wiktionary.org/wiki/touch_grass">
+            touching grass
+          </a>{" "}
+          and highly recommend it. Get outside and do things! 😀 Oh, and if you
+          haven't received Jesus Christ's{" "}
+          <a href="https://www.biblegateway.com/">free gift of salvation</a>,
+          you should look into that!
         </p>
       </div>
     </section>
